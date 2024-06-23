@@ -1,0 +1,58 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <table>
+        <thead> 
+            <tr colspan="4">
+                <th>Front-end Development Results</th>      
+            </tr>            
+            <!-- Забележете, че тук не използваме <td> тага а <th>, което казва на html, че това е някаква кутийка, обаче в хедъра и прави текста болднат -->
+            <tr>
+                <th>Num</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Score</th>
+            </tr>      
+        </thead>
+    </table>
+</body>
+</html> -->
+
+<!-- 
+* Забележете, че тук (<th>Front-end Development Results</th>) имаме един ред и 
+            (<tr>
+                <th>Num</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Score</th>
+            </tr>)
+* не отива на страни. 
+* Какво сме направили? 
+* - Задали сме colspan да е 4.
+
+Какво трябва да направим:
+- Идеята е,че в хеда да имаме един ред, който да има colspan 4.
+- После да имаме втори ред, който да имa 4-те  неща (Num, First Name, Last Name, Score) заедно и после да затворим тага.
+
+Къде сме сгрешили?
+- Това което не се получи в горното решение е, че сме задали на реда да бъде 4, а трябва да го зададем на самия хедър.
+- Това, което искаме да зададем предварително е и th да имат бордър, за да видим как изглеждат (добавяме th в css кода.)
+- Следва да добавим main частта (което е tbody тагът), - тук нещата са структурирани по същия начин. Имаме row и вътре в него имаме информация. Добавяме информацията за тримата души в бодито.
+- Накрая след бодито добавяме тагът tfoot, който ще бъде фуутърът на нашата страница.
+Фуутърът пак трябва да бъде merge между четирите и да пише "Average Score"
+
+
+
+table, td, th {
+    boarder: 1px solid black;
+}
+
+-->
+
+<!-- Вярно решение -->

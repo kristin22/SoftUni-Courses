@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Глава 6: Създаване на таблицци. Табличен дизайн</title>
+    <style>
+        .div1 {
+            width: 200px;
+            background: #ccc;
+            padding: 5px;
+            padding-right: 20px;
+            border: solid 1px black;
+            float: left;
+        }
+
+        .div2 {
+            width: 200px;
+            background: #fc0;
+            padding: 5px;
+            border: solid 1px black;
+            float: left;
+            position: relative;
+            top: 40px;
+            left: -70px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>HTML 5 <br>CSS 3</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Main</a>
+        <a href="#">News</a>
+        <a href="#">Downloads</a>
+        <a href="#">Forum</a>
+        <a href="#">Contacts</a>
+    </nav>
+
+    <aside>
+        <a href="index.html">Main</a>
+        <a href="audio.html">Audio</a>
+        <a href="video.html">Video</a>
+    </aside>
+
+    <article>
+        <h2>Глава 6. <br> Създаване на таблици. Табличен дизайн</h2>
+
+        <!--& Глава 6: Създаване на таблици. Табличен дизайн -->
+
+        <hr>
+
+        <ul type="none">
+            <li>Глава 6. Създаване на таблици. Табличен дизайн
+                <ul type="none">
+                    <li>6.1. За какво се използват таблиците в HTML?</li>
+                    <li>6.2. Създаване на прости таблици</li>
+                    <li>6.3. Създаване на сложни таблици</li>
+                    <li>6.4. Секции на таблицата</li>
+                    <li>6.5. Таблично оформление на HTML страници</li>
+                    <li>6.6. Създаване на ефектна таблица</li>
+                </ul>
+            </li>
+        </ul>
+
+        <!--& 6.1. За какво се използват таблиците в HTML? -->
+        <!-- ~ table(таблица), th(заглавие), tr(ред), td(колона), thead, tbody, tfoot
+               Таблица - блоков елемент, изобразяващ се отделно от другите елементи (абзаци, изображения, видеоклипове).   -->
+
+        <!--& 6.2. Създаване на прости таблици -->
+        <!-- таг TABLE създава таблица <table>...</table> 
+            ~ атрибути на тах TABLE:    (не се поддържат от HTML стандарта)
+            ~ align, background, bgcolor, border, bordercolor, cellpading, cellspacing, colls, frame, height, rules, summary, width
+
+            !Поставяйте атрибутите на таблиците в отделен CSS файл.
+            
+            !Проверка на допустимост на HTML код на адрес http://validator.w3.org
+
+            !Всички атрибути, отнасящи се до оформлението трябва да бъдат изнесени в отделен CSS файл.
+
+            Ако сложим таблица в абзац, тя ще се покаже отделно, дори и да е сложена в таг P.
+            В таблицата се създават отделни редове и колони.
+            ~ TR - създава ред в таблицата         TD - създава колона
+
+            ~ атрибути на тага TR - align, bgcolor, bordercolor, valign
+            ~ атрибути на тага TD - abbr, align, bgcolor, bordercolor, colspan, height, rowspan, valign, width
+
+            Пример: таблица с 3 колони и 4 реда. Всяка клетка от таблицата ще има номера на клетката
+        -->
+        <table>
+            <tr>    <td>1</td><td>2</td><td>3</td>    </tr>
+            <tr>    <td>4</td><td>5</td><td>6</td>    </tr>
+            <tr>    <td>7</td><td>8</td><td>9</td>    </tr>
+            <tr>    <td>10</td><td>11</td><td>12</td>    </tr>
+        </table>
+
+        <hr>
+
+        <!-- Добавяне на рамка и задаване на ширина на таблицата: -->
+        <table border="1" width="80%">
+            <tr>    <td>1</td><td>2</td><td>3</td>    </tr>
+            <tr>    <td>4</td><td>5</td><td>6</td>    </tr>
+            <tr>    <td>7</td><td>8</td><td>9</td>    </tr>
+            <tr>    <td>10</td><td>11</td><td>12</td>    </tr>
+        </table>
+
+        <br> <hr> <br>
+
+        <!-- Ширината на таблицата може да бъде най-малко 1px.
+           ~ За да направим рамката тънка: атрибут border="0", разстояние между границите на съседните клетки cellspacing="1", фон на таблицата чер bgcolor="#000000". За да се вижда текста, променете цвета на фона на редовете TR на сив/бял <tr bgcolor="#F5E8FF">.
+
+            !Пример: създаване на таблица с тънка рамка (1)
+        -->
+        <table width="100%" border="0" cellspacing="1" bgcolor="#000000">
+                <tr bgcolor="#F5E8FF">    <td>1</td><td>2</td><td>3</td>     </tr>
+                <tr bgcolor="#F5E8FF">    <td>4</td><td>5</td><td>6</td>     </tr>
+                <tr bgcolor="#F5E8FF">    <td>7</td><td>8</td><td>9</td>     </tr>
+                <tr bgcolor="#F5E8FF">    <td>10</td><td>11</td><td>12</td>     </tr>
+        </table>
+        <br> <hr> <br>
+
+
+        <!-- ~ атрибут RULES - ще има линии само между редовете (rules="rows"), колоните (rules="cols") на таблицата  -->
+
+        <table width="100%" border="0" cellspacing="1" bgcolor="#000000" rules="rows">
+            <tr bgcolor="#F5E8FF">    <td>1</td><td>2</td><td>3</td>     </tr>
+            <tr bgcolor="#F5E8FF">    <td>4</td><td>5</td><td>6</td>     </tr>
+            <tr bgcolor="#F5E8FF">    <td>7</td><td>8</td><td>9</td>     </tr>
+            <tr bgcolor="#F5E8FF">    <td>10</td><td>11</td><td>12</td>     </tr>
+        </table>
+        <br> <hr> <br>
+
+        <table width="100%" border="0" cellspacing="1" bgcolor="#000000" rules="cols">
+            <tr bgcolor="#F5E8FF">    <td>1</td><td>2</td><td>3</td>     </tr>
+            <tr bgcolor="#F5E8FF">    <td>4</td><td>5</td><td>6</td>     </tr>
+            <tr bgcolor="#F5E8FF">    <td>7</td><td>8</td><td>9</td>     </tr>
+            <tr bgcolor="#F5E8FF">    <td>10</td><td>11</td><td>12</td>     </tr>
+        </table>
+        <br> <hr> <br>
+
+        <!-- И в двата примера (rules="rows"|"cols") няма външна рамка/граница. За да създадем външна рамка трябва да създадем около таблицата ни още 1 таблица, която ще има само външна рамка.
+        ! Пример: създаваме таблица по образ и подобие на Пример (1) по-горе -> създаване на таблица с тънка рамка
+          ~ Новата (външната) таблица ще има само 1 клетка, в която ще поместим нашата таблица.
+          ~ На външната ще покажем всички линии, а на вътрешната само хоризонталните и вертикалните. 
+          ~ В клетката на външната таблица поместваме вътрешната
+     -->
+        <table cellspacing="0" cellpadding="1" bgcolor="#000000" width=100%><tr><td>     <!-- Външна  таблица от 1 клетка -->
+          
+            <table width="100%" border="0" cellspacing="1" bgcolor="#000000" rules="rows">  <!-- Външна  таблица от 4 реда 3 колони -->
+                <tr bgcolor="#F5E8FF">    <td>1</td><td>2</td><td>3</td>     </tr>
+                <tr bgcolor="#F5E8FF">    <td>4</td><td>5</td><td>6</td>     </tr>
+                <tr bgcolor="#F5E8FF">    <td>7</td><td>8</td><td>9</td>     </tr>
+                <tr bgcolor="#F5E8FF">    <td>10</td><td>11</td><td>12</td>     </tr>
+            </table>
+
+        </td></tr></table>
+
+        <br> <hr> <br>
+
+        <!-- С таблици можем да създаваме елементи от оформлението
+             Пример:  -->
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td width="20">&nbsp;</td>
+                <td rowspan="7" width="2" bgcolor="#9900FF"></td>
+                <td colspan="3">&nbsp;</td>
+                <td rowspan="7" width="2" bgcolor="#9900FF"></td>
+                <td rowspan="5">&nbsp;</td>
+            </tr>
+
+            <tr>    
+                <td height="2" bgcolor="#9900FF"></td>
+                <td height="2" bgcolor="#9900FF" colspan="2"</td>
+                <td width="20" rowspan="4">&nbsp;</td>
+            </tr>
+            <tr>
+                <td rowspan="5">&nbsp;</td>
+                <td width="20" rowspan="4">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>    
+                <td>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit congue dui, quis mollis orci bibendum non. Curabitur nec interdum tortor. Duis pellentesque mollis ante vitae mollis. Ut at semper tellus. Nulla tortor arcu, venenatis a placerat ac, tristique sit amet dui. Nullam sodales erat sit amet convallis dignissim. Fusce viverra ligula vehicula, tristique quam vel, fringilla quam. Nulla ut metus quis justo rhoncus molestie sed sit amet lacus. Quisque maximus, magna rutrum aliquam condimentum, leo orci aliquet ligula, vel sodales augue nisi eget ipsum. Suspendisse facilisis urna dictum leo iaculis, ullamcorper porta ligula tempus. Aliquam erat volutpat. Pellentesque vehicula urna arcu, ut molestie tortor lacinia a.</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td height="2" colspan="2" bgcolor="#9900FF"></td>
+                <td height="2" bgcolor="#9900FF"></td>
+            </tr>
+            <tr>
+                <td colspan="3">&nbsp;</td>
+                <td width="20">&nbsp;</td>
+            </tr>
+        </table>
+
+        <!-- ~ Пример: отделяне на фрагменти от текст с помощта на таблици
+             ~ - Неголям отстъп отляво и вертикална линия отляво с дебелина от няколко пиксела    -->
+        <table>
+            <tr>
+                <td width="50" rowspan="3">&nbsp;</td>
+                <td width="2" rowspan="3" bgcolor="#9900FF"></td>
+                <td width="10" rowspan="3">&nbsp;</td>
+                <td height="10"></td>
+            </tr>
+            <tr>
+                <td>Aenean maximus consequat ex quis dapibus. Suspendisse potenti. Mauris iaculis arcu vel tincidunt efficitur. Pellentesque a quam augue. Fusce pretium tincidunt metus, in vehicula dui hendrerit sit amet. Sed euismod neque vitae pharetra consequat. Etiam a dolor non leo dapibus pretium eu aliquam leo. Duis quis lectus libero. Morbi facilisis erat sed ipsum blandit, a vehicula felis dictum. Integer vestibulum sem non mi rutrum, et faucibus arcu blandit.</td>
+            </tr>
+            <tr>
+                <td height="10"></td>
+            </tr>
+        </table>
+        <br>
+
+        <!-- HR създава хоризонтална линия. 
+             Недостатъци: - всеки браузър изобразява линията по различен начин.
+                          - HR атрибута не се поддържа от всички браузъри.
+             Пример: <HR COLOR="red">   
+        
+           ~ Може да създадем хоризонтална линия с помощта на таблица. Изобразява се по един и същ начин за всички браузъри.
+                ~ width  (на таблицата) регулира ширината/дължината на линията.
+                ~ height (на таг TD) регулира дебелината на линията.
+                ~ bgcolor регулира цвета на линията.
+                
+           Пример: създаване на хоризонтална линия с помощта на таблица.
+        -->
+        <HR COLOR="red">        <br>
+
+        <p>Nulla massa magna, imperdiet sit amet arcu quis, viverra ullamcorper magna. Vestibulum commodo ex id eros finibus faucibus. Duis blandit, lectus et cursus scelerisque, elit felis auctor justo, ac consequat lectus felis at justo. Vivamus imperdiet, felis luctus malesuada malesuada, metus diam ultricies lectus, et porttitor ligula nunc vitae libero. </p>
+
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr bgcolor="#9900FF">
+                <td height="2"></td>
+            </tr>
+        </table>
+
+        <p>Mauris tincidunt eu est sodales congue. Donec fringilla lacus a leo convallis, non faucibus tortor placerat. Proin nec neque ante. Proin sagittis nisi eu odio pretium cursus. In hac habitasse platea dictumst. Pellentesque semper rutrum erat sit amet vestibulum. Sed scelerisque tristique scelerisque.</p>
+        
+        <br><hr><br>
+
+        <!--& 6.3. Създаване на сложни таблици - обединяване на клетки -->
+        <!-- Пример: проста таблица 3х3 
+             1. Създаваме обикновена таблица 3х3 с <table border="1" width="100%">
+             2. colspan (със стойност 2), защото обединяваме клетки 2 и 3 (Cell 2 и Cell 3).
+             3. rowspan (обединява клетки по редове)
+
+             rospan и colspan са парам. на td.
+            -->
+        <table border="1" width="100%">
+            <!-- <tr>    <td>Cell 1</td><td>Cell 2</td><td>Cell 3</td>    </tr> -->
+            <tr>    <td>Cell 1</td><td colspan="2">Cell 2 : Cell 3</td>    </tr>
+            <tr>    <td>Cell 4</td><td>Cell 5</td><td>Cell 6</td>    </tr>
+            <tr>    <td>Cell 7</td><td>Cell 8</td><td>Cell 9</td>    </tr>
+        </table>    <br>
+
+        <!-- 
+         - В първия ред на таблицата са обединени 2 реда и 2 колони   
+         - Във втория ред (втория tr таг) имаме 2 клетки: Manual и Auto.
+         - Останалите редове са най обикновени, с по 3 клетки.
+         -->
+        <table width="100%" border="0" cellspacing="1" bgcolor="#000000">
+            <tr bgcolor="#F5E8FF">    
+                <td rowspan="2" valign="center" align="center">Model</td>
+                <td colspan="2" align="center">Price</td>    
+            </tr>
+            <tr bgcolor="#F5E8FF">    <td>Manual</td><td>Auto</td>    </tr>
+            <tr bgcolor="#F5E8FF">    <td>VA420</td><td>30000</td><td>33000</td>    </tr>
+            <tr bgcolor="#F5E8FF">    <td>VA550</td><td>35000</td><td>39000</td>    </tr>
+        </table>
+        
+        <br><hr><br>
+
+        <!--& 6.4. Секции на таблицата -->
+        <!-- В горния пример Model, Auto, Manual се отнасят към заглавието.
+            ~ таг TH - отделя заглавието от останалите клетки - пишем th вместо td.
+            - Визуално няма разлика между клетки, създадени с th и td, но с CSS можем да оформим двата тага поотделно.
+            ~ атрибутът rules може да има стойност groups - тогава линията се показва само около група клетки, създадени с тагове thead, tbody, tfoot:
+                ~- thead описва заглавието на таблицата, поставя се веднага след table тага
+                ~- tbody описва основната част на таблицата
+                ~- tfoot описва клетките, които са в края на таблицата, tfoot се поставя преди tbody
+                Пример: използване на тагове thead, tbody, tfoot
+        -->
+
+        <table>
+            <thead>  
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                </tr>   
+            </thead>
+            <tfoot>                <tr>
+                <td>3</td>
+                <td>4</td>
+            </tr> 
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td>5</td>
+                    <td>6</td>
+                </tr> 
+            </tbody>
+        </table>
+
+        <br><hr><br>
+
+        <!--& 6.5. Таблично оформление на HTML страници -->
+        <!-- & видове оформление на стр-ци: текстов, фреймов, табличен, контейнерен
+             & Таблично оформление на стр-ци 
+            - Често използвано от начинаещите, защото е лесно и съвместимо с всички браузъри.
+            - Недостатъци: обемен код   -->
+
+        <!-- ~ Предимства и недостатъци при използване на CSS:
+                ~ предимства 
+                    1) компактен код 
+                    2) лесна промяна на оформлението на произволен блок от стр-та.
+                ~ недостатъци 
+                    1) трудно четим код, в сравнение с таблиците 
+                    2) трябва да направим така, че даден елемент да изглежда еднакво за всички браузъри.
+                    
+        ~ Пример: оформяне на стр-ца чрез таблици    
+        -->
+        <table width="100%" height="100%" border="0">
+            <tr>
+                <td colspan="3" valign="center" align="center">Header</td>
+            </tr>
+            <tr>
+                <td width="25%" valign="top">Menu</td>
+                <td width="50%" valign="top">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit congue dui, quis mollis orci bibendum non. Curabitur nec interdum tortor. Duis pellentesque mollis ante vitae mollis. Ut at semper tellus. Nulla tortor arcu, venenatis a placerat ac, tristique sit amet dui. Nullam sodales erat sit amet convallis dignissim. Fusce viverra ligula vehicula, tristique quam vel, fringilla quam. Nulla ut metus quis justo rhoncus molestie sed sit amet lacus. Quisque maximus, magna rutrum aliquam condimentum, leo orci aliquet ligula, vel sodales augue nisi eget ipsum. Suspendisse facilisis urna dictum leo iaculis, ullamcorper porta ligula tempus. Aliquam erat volutpat. Pellentesque vehicula urna arcu, ut molestie tortor lacinia a.</td>
+                <td width="25%" valign="top">Advertisement</td>
+            </tr>
+            <tr>
+                <td colspan="3" valign="center" align="center">Footer</td>
+            </tr>
+        </table>
+
+        <br><hr><br>
+
+        <!-- Тази таблица ще заеме целия прозорец на екрана - по височина 100% и по ширина 100%.
+             Ако имаме повече текст, не задаваме височина.
+             Лявата колона е 25%, дясната колона 25%, централна колона 50%. В резултат на това страницата ще се адаптира към текущия размер на прозореца.
+             
+             ~ Пример: използване на тага DIV и CSS стилове -> стиловете са в HEAD (.div1 и .div2) -->
+
+        <div class="div1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit congue dui, quis mollis orci bibendum non. Curabitur nec interdum tortor. Duis pellentesque mollis ante vitae mollis. Ut at semper tellus. Nulla tortor arcu, venenatis a placerat ac, tristique sit amet dui. Nullam sodales erat sit amet convallis dignissim. Fusce viverra ligula vehicula, tristique quam vel, fringilla quam.</div>
+
+        <div class="div2"> Nulla ut metus quis justo rhoncus molestie sed sit amet lacus. Quisque maximus, magna rutrum aliquam condimentum, leo orci aliquet ligula, vel sodales augue nisi eget ipsum. Suspendisse facilisis urna dictum leo iaculis, ullamcorper porta ligula tempus. Aliquam erat volutpat. Pellentesque vehicula urna arcu, ut molestie tortor lacinia a.</div>
+
+
+        <!--& 6.6. Създаване на ефектна таблица -->
+        <!-- ~ За създаване на ефектни таблици можем да използваме фонови изображения.
+            ⁡⁢⁣⁣Например ⁡⁢⁢⁢да поставим такова изображение в заглавната част на таблицата.⁡
+            ⁡⁣⁢⁢http://dkws.org.ua/mybooks/bg.png⁡    to download background images
+
+            Можем да създаваме фонови изображения с GIMP
+            Пример: ефектна таблица (table with gradient)    -->
+        
+
+
+    </article>
+    
+    <br>
+    <footer align="right">    @copy Kristina Ch.      </footer>
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Tutorial</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<!--? BODY-> HEADER NAV ASIDE ARTICLE FOOTER -> SECTION creates sections inside  those body sections -->
+
+<body>
+    <header>
+        <h1>HTML 5 <br>CSS 3</h1>
+    </header>
+
+    <!--? Creating navigation -->
+    <nav>
+        <a href="index.html">Main</a>
+        <a href="#">News</a>
+        <a href="#">Downloads</a>
+        <a href="#">Forum</a>
+        <a href="#">Contacts</a>
+    </nav>
+
+    <!--? Creating side menu -->
+    <aside>
+        <a href="index.html">Main</a>
+        <a href="audio.html">Audio</a>
+        <a href="video.html">Video</a>
+    </aside>
+
+    <article>
+        <h2>Глава 2. <br> Структуриране на текст</h2>
+
+        <!--&   Глава 2: Структуриране на текст -->
+
+        <!--~ strong - for bold text, em - for italic; em should be inside strong -->
+        <p><strong><em>Choose your car type: </em></strong><input list="car model">
+            <datalist id="car model">
+                <option value="Audi"></option>
+                <option value="BMW"></option>
+                <option value="Mercedes"></option>
+            </datalist>
+        </p>
+        
+        <hr>
+
+        <p>Temperature</p>
+        <meter value="0" max="100" low="10" high="60" optimum="40">Low</meter>
+        <meter value="30" max="100" low="10" high="60" optimum="40">Normal</meter>
+        <meter value="80" max="100" low="10" high="60" optimum="40">Hot</meter>
+        <hr>
+
+        <p>The object's downloading progress:
+            <progress max="100" value="50%">
+                <span id="progress">50</span>%
+            </progress>
+        </p>
+
+        <hr>
+
+        <!--* Номерирани OL и неномерирани списъци UL -->
+        <!-- ul - неномериран списък -->
+        <!-- li - създава отделните елементи на списъка -->
+        <!-- оl - неномериран списък -->
+        <!-- type задава вида на  списъка неномериран -> disc, circle, square, none; 
+            номериран -> вид на номерациата: 1, A, a, I, i -->
+
+        <ol align="left" type="a">
+            <li>First
+                <ol>
+                    <li>1.1</li>
+                    <li>1.2</li>
+                    <li>1.3</li>
+                </ol>
+            </li>
+            <li>Second</li>
+            <li>Third</li>
+        </ol>
+
+        <ul align="left" type="disc">
+            <li>First</li>
+            <li>Second</li>
+            <li>Third</li>
+        </ul>
+
+        <hr>
+
+        <!-- dl създава списък с определения -->
+        <!-- dt термин -->
+        <!-- dd определение-->
+        <dl>
+            <dt>HTML</dt>
+            <dd>Hyper Text Markup Language</dd>
+
+            <dt>XML</dt>
+            <dd>eXtensible Markup Language</dd>
+        </dl>
+
+        <hr>
+
+        <!--* PRE and PLAINTEXT TAGS -->
+        
+        <!-- Тагове за показване на  предварително форматиран текст -> plaintext, pre -->
+        <!-- В тези два тага браузърът не замменя няколко поредни интервала с един. -->
+        <!-- Разликата между двата тага е, че в pre може да използваме всички HTML тагове 
+             БЕЗ BIG, IMG, OBJECT, SMALL, SUB и SUP. Тук обикновените тагове се паказват като текст.  
+        -->
+
+        <!-- 
+        !!! I'm commenting the PRE and PLAINTEXT tag examples because they're messing up the rest of the page!!!
+        
+        <pre>In computer-based text processing and digital typesetting, a non-breaking space (NBSP) is a variant of the space  character that prevents an automatic line break (line wrap) at its position.
+        </pre>
+
+        <plaintext>
+            <ol>
+                <li>First</li>
+                <li>Second</li>
+                <li>Third</li>
+            </ol>
+
+            <ul>
+                <li>First</li>
+                <li>Second</li>
+                <li>Third</li>
+            </ul>
+        </plaintext>
+
+        ->
+        
+
+        <hr>
+
+        <!--~ Quotes -->
+        <!-- Тагът BLOCKQUOTE се използва за поставяне на цитати. Текстът в този таг се показва с малък отстъп отляво. -->
+        <!-- Атрибутът CITE сочи към източника на цитата. Универсалните атрибути също се поддържат. -->
+
+        <blockquote cite="The source of the quote">
+            <p>Enthusiasm is the yeast that makes your hopes shine to the stars. Enthusiasm is the sparkle in your eyes, irresistable surge of will and energy to execute your ideas.</p>
+            <p><b>Henry Ford</b></p>
+        </blockquote>
+
+        <hr>
+
+        <!--~ Адрес --> 
+        <!-- Тагът ADDRESS за отделяне на пощенски адрес. Този таг се държи като P, но текстът тук е курсив. Този таг няма собствени атрибути и поддържа само универсалните. ч-->
+
+        <address>Leave your address here!</address>
+
+        <hr>
+
+        <ul type="none">
+            <li>Глава 2. Структуриране на текст
+                <ul type="none">
+                    <li>2.1. Абзаци (таг P)</li>
+                    <li>2.2. Заглавия (тагове H1-H6)</li>
+                    <li>2.3. Номерирани и неномерирани списъци</li>
+                    <li>2.4. Тагове за показване на форматиран текст</li>
+                    <li>2.5. Цитати</li>
+                    <li>2.6. Адрес</li>
+                    <li>2.7. Коментари в HTML кода</li>
+                </ul>
+            </li>
+
+        </ul>
+
+        <hr>
+
+    </article>
+    
+    <footer align="center">    @copy Kristina Ch.      </footer>
+
+</body>
+</html>

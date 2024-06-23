@@ -1,0 +1,87 @@
+/* Fitness-Site */
+
+body {
+    background: #F0F1F5;
+    margin: 0;
+    padding: 2rem 12rem;  /* за да не е залепено  за екрана */
+    font-family: "Helvetica", sans-serif;
+}
+
+/* header */
+
+header > p {    /* искаме фърст чайлда p */
+    float: left;
+    color: #F9690E;
+}
+
+nav {
+    text-align: right;
+}
+
+nav ul {
+    float: right;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 0 8px; /* разстояние между отделните li => отгоре и отдолу е 0, а отляво и отдясно е 8пь */ 
+}
+
+nav ul li a {   /* Тук работим с <a> тагът и на него променяме цвета. */
+    color: #F9690E;
+    text-decoration: none;  /* За да премахнем подчертаното и декорацията от хиперлинковете. */
+}
+
+/* main */
+
+main section:nth-child(1) {
+    margin-top: 3rem;
+    background-image: url("../Requirements-and-Resources/Images/picture.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 11rem 15rem;
+}
+
+main section:nth-child(1) h1 {
+    color: white;
+}
+
+main section:nth-child(1) span {
+    color: #F9690E;
+}
+
+main section:nth-child(1) button {
+    background: #F9690E;
+    border: none;
+    color: white;
+    font-size: 22px;
+    padding: 12px;
+    font-weight: bold;
+}
+
+main section:nth-child(2) article {
+    background: #F9690E;
+    color: white;
+    width: 29%;
+    display: inline-block;
+    padding: 20px;
+}
+
+main section:nth-child(2) article h3 {
+    text-align: center;
+}
+
+/* footer */
+
+footer article {
+    width: 46%;
+    display: inline-block;
+}
+
+footer article:nth-child(2) {
+    text-align: right;
+}
+
+footer i {
+    padding: 16px;
+}
