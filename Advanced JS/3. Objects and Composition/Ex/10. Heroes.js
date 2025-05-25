@@ -1,11 +1,24 @@
 function solve() {
 
     const obj = {
-        mage(name) {
-
+        fighters: {
+            fight() {}
         },
-        fighter() {
+        mages: {
+            cast() {
+                console.log(`${}`);
+                
+            }
+        },
+        heroes: {},
 
+        mage(name) {
+            // this.mages.push({name: name, health: 100, mana: 100});
+            this.mages[name] = {health: 100, mana: 100}
+        },
+        fighter(name) {
+            // this.fighters.push({name: name, health: 100, stamina: 100});
+            this.fighters[name] = {health: 100, stamina: 100}
         }
     };
 
